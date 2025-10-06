@@ -31,7 +31,7 @@ header {
     border-radius: 5px;
     padding: 5px;
 
-    &>span {
+    &>* {
 
       background: black;
       border-radius: 5px;
@@ -39,7 +39,7 @@ header {
 
     }
 
-    .tries {
+    &>*:not(:last) {
       margin-right: 5px;
     }
   }
@@ -86,14 +86,15 @@ main {
     }
 
     .front {
-      border: 3px solid #aaa;
+      border: 5px solid #bababa;
       transform: rotateY(180deg);
-    }
-    .back {
+      z-index: 1;
 
+    }
+
+    .back {
+      background: #bababa;
     }
   }
 
 }
-
-
