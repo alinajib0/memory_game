@@ -13,5 +13,16 @@ let tries_number = 0;
 main();
 
 function main() {
+  shuffle();
 }
 
+function shuffle() {
+  let game_board = [...BASE_CHARS, ...BASE_CHARS];
+
+  for (let i = board.length - 1; i > 1; i--) {
+    const ran = Math.floor(Math.random() * i);
+    let temp = board[i];
+    board[i] = board[ran];
+    board[ran] = temp;
+  }
+}
